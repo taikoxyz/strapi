@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "title"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Full-time",
+        "Part-time"
+      ],
+      "required": true
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Remote",
+        "Office"
+      ],
+      "required": true
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "howToApply": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

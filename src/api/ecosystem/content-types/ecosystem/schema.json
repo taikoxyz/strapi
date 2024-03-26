@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ecosystems",
+  "info": {
+    "singularName": "ecosystem",
+    "pluralName": "ecosystems",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Mainnet",
+        "Testnet",
+        "Coming soon"
+      ],
+      "default": "Mainnet",
+      "required": true
+    },
+    "project_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-category.project-category",
+      "mappedBy": "projects"
+    }
+  }
+}
