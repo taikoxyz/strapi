@@ -22,6 +22,9 @@
       "targetField": "title",
       "required": true
     },
+    "date": {
+      "type": "date"
+    },
     "link": {
       "type": "string"
     },
