@@ -22,6 +22,9 @@
       "targetField": "title",
       "required": true
     },
+    "link": {
+      "type": "string"
+    },
     "timeToRead": {
       "type": "string",
       "required": true
