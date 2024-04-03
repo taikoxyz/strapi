@@ -10,13 +10,13 @@ export const blogApi = createApi('api::blog.blog', ['image', 'category'], {
 
         if(query.date?.from) {
             $and.push({
-                createdAt: { $gte: query.date.from }
+                date: { $gte: query.date.from }
             })
         }
 
         if(query.date?.to) {
             $and.push({
-                createdAt: { $lte: query.date.to }
+                date: { $lte: query.date.to }
             })
         }
 

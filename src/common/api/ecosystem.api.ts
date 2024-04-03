@@ -10,8 +10,8 @@ export const ecosystemApi = createApi(
             
             if(query.search) {
                 where.$or.push(
-                    { name: { $contains: query.search } },
-                    { description: { $contains: query.search } }
+                    { name: { $containsi: query.search } },
+                    { description: { $containsi: query.search } }
                 );
             }
 
