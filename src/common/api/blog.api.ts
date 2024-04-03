@@ -34,6 +34,6 @@ export const blogApi = createApi('api::blog.blog', ['image', 'category'], {
             where.id = { $notIn: ids }
         }
 
-        return { where };
+        return { where, orderBy: { date: 'desc' } };
     }
 })
