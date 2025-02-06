@@ -1,4 +1,8 @@
 export default ({ env }) => ({
+    'import-export-entries': {
+        enabled: true,
+        config: {},
+    },
     transformer: {
         enabled: true,
         config: {
